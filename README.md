@@ -16,8 +16,17 @@ This code requires:
 - Python 3.8
 - torch 1.11.0
 - torchaudio 0.11.0
-- tqdm
 
 ### Training networks
+
+To train the first stage of SEStream:
+```
+python train.py --stage 1 --num_gpu 1 --target_bit 0 
+```
+Then train the second stage of SEStream:
+```
+python train.py --stage 2 --num_gpu 1 --target_bit 0 
+```
+
 
 
