@@ -7,6 +7,7 @@ The framework of encoder - decoder and RVQ relies on wesbz' repository at: https
 
 In this section, we will introduce the datasets we use for our experiment. 
 
+
 ## Getting started
 
 ### Python requirements
@@ -16,6 +17,13 @@ This code requires:
 - Python 3.8
 - torch 1.11.0
 - torchaudio 0.11.0
+
+### Preparing training dataset
+
+To generate the json file for training:
+```
+python generate_data.py --dataset "./data/LibriTTS/" --noise_dataset "./data/noise/"
+```
 
 ### Training networks
 
