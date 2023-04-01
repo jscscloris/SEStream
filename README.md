@@ -54,7 +54,7 @@ To train the first stage of SEStream with quantizer dropout:
 ```
 python train.py --stage 1 --num_gpu 1 --target_bit 0 
 ```
-Then train the second stage of SEStream quantizer dropout:
+Then train the second stage of SEStream with quantizer dropout:
 ```
 python train.py --stage 2 --num_gpu 1 --target_bit 0 
 ```
