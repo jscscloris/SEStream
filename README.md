@@ -1,12 +1,35 @@
 # SEStream
-The code for "A Two-Stage Training Framework for Joint Speech Compression and Enhancement"
+The code for "A Two-Stage Training Framework for Joint Speech Compression and Enhancement".
+Some results are shown in demo-audio.
 
 The framework of encoder - decoder and RVQ relies on wesbz' repository at: https://github.com/wesbz/SoundStream
 
 ## Datasets
 
 In this section, we will introduce the datasets we use for our experiment. 
-
+We use LibriTTS train-clean-100 and train-clean-360 as our dataset, the pipline is as followed:
+```
+./generate_data.py
+./train.py
+./data/
+/LibriTTS/
+├── train-clean-100/
+├── train-clean-360/
+└── dev-clean/
+  ├── 84/
+  ├── ...
+  └── 8842/
+    ├── 302196/       
+    ├── ...
+    └── 304647/
+      ├── 8842_304647_000005_000000.wav
+        ...
+/noise/
+├── train-clean-100/
+└── dev-clean/
+  ├── 84_121123_000007_000001.wav
+    ...
+```
 
 ## Getting started
 
