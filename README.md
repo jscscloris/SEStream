@@ -58,7 +58,7 @@ Then train the second stage of SEStream:
 python train.py --stage 2 --num_gpu 1 --target_bit 0 
 ```
 
-### Test
+### Evaluation methods
 
 The evaluation is based on visqol as shown in https://github.com/google/visqol.
 
