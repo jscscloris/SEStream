@@ -1,5 +1,5 @@
 # SEStream
-This is the code for the paper "A Two-Stage Training Framework for Joint Speech Compression and Enhancement". 
+This is the code for the paper: Jiayi Huang, Zeyu Yan, Wenbin Jiang, Peilin Liu, Fei Wen, "A Two-Stage Training Framework for Joint Speech Compression and Enhancement", 2023. 
 
 Some results are provided in the demo-audio folder.
 
