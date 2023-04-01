@@ -16,7 +16,7 @@ from spec_loss import MultiResolutionLoss
 import models
 import VQ
 
-parser=argparse.ArgumentParser(description="soundstream test")
+parser=argparse.ArgumentParser(description="the code of SEStream")
 parser.add_argument("--batch_size",type=int,default=128,help="Batch size")
 parser.add_argument("--num_gpu",type=int,default=1,help="number of gpu")
 parser.add_argument("--epochs",type=int,default=1000,help="training epoch")
