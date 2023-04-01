@@ -29,7 +29,7 @@ parser.add_argument("--channel_g",type=int,default=32,help="number of channel fo
 parser.add_argument("--channel_d",type=int,default=32,help="number of channnel for stft_disc")
 parser.add_argument("--output_path",type=str,default="./libritts",help="the path for result")
 parser.add_argument("--stage",type=int,default=1,help="the training stage of the model")
-parser.add_argument("--target_bit",type=int,default=6,help="target bit rate")
+parser.add_argument("--target_bit",type=int,default=6,help="target bit rate. If 0, train with quantizer dropout")
 parser.add_argument("--n_q",type=int,default=24,help="the number of VQs")
 parser.add_argument("--n_embed",type=int,default=1024,help="the size of codebook")
 parser.add_argument("--rec_type",type=int,default=1,help="the type of reconstruction loss")
