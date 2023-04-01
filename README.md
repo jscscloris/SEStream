@@ -1,7 +1,7 @@
 # SEStream
 The code for "A Two-Stage Training Framework for Joint Speech Compression and Enhancement"
 
-The framework of encoder - decoder and RVQ relies on wesbz' repository. https://github.com/wesbz/SoundStream
+The framework of encoder - decoder and RVQ relies on wesbz' repository at: https://github.com/wesbz/SoundStream
 
 ## Datasets
 
