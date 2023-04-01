@@ -49,11 +49,11 @@ python generate_data.py --dataset "./data/LibriTTS/" --noise_dataset "./data/noi
 
 ### Training networks
 
-To train the first stage of SEStream:
+To train the first stage of SEStream with quantizer dropout:
 ```
 python train.py --stage 1 --num_gpu 1 --target_bit 0 
 ```
-Then train the second stage of SEStream:
+Then train the second stage of SEStream quantizer dropout:
 ```
 python train.py --stage 2 --num_gpu 1 --target_bit 0 
 ```
