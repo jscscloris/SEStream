@@ -6,7 +6,6 @@ The framework of encoder - decoder and RVQ relies on wesbz' repository at: https
 
 ## Datasets
 
-In this section, we will introduce the datasets we use for our experiment. 
 We use LibriTTS train-clean-100 and train-clean-360 as our dataset. The noise dataset is synthesized by train-clean-100\dev-clean and Freesound, and stored in ./data/noise/... . The pipline of dataset is shown as followed:
 ```
 ./generate_data.py
