@@ -62,9 +62,6 @@ elif args.stage==2:
     optimizer_d = optim.Adam(list(wave_disc.parameters()) + list(stft_disc.parameters()), lr=1e-4)
     encoder.load_state_dict(torch.load(os.path.join(args.output_path,"MMSE_encoder.pth"),map_location=device))
     vq.load_state_dict(torch.load(os.path.join(args.output_path,"MMSE_vq.pth"),map_location=device))
-    decoder_d=models.Decoder(C=args.channel_g, D=256)
-    decoder_d.to(device)
-    decoder_d.load_state_dict(torch.load(os.path.join(args.output_path,"MMSE_decoder.pth"),map_location=device))
 
     if args.load_checkpoint!=None:
         decoder.load_state_dict(torch.load(os.path.join(args.output_path,args.load_checkpoint+"_decoder.pth"),map_location=device))
@@ -205,7 +202,6 @@ def train_stage_2(epoch):
         q,commit_loss=vq(e.permute(0,2,1),args.target_bit)
         e=q.permute(0,2,1)
         G_x = decoder(e)
-        G_d_x=decoder_d(e.detach())
         train_vq_loss_g+=commit_loss.item()
         #Train Discriminator
         wave_disc_x, features_wave_disc_x,_ = wave_disc(target)
@@ -226,7 +222,7 @@ def train_stage_2(epoch):
 
         #Train Generator 
         #reconstruction loss
-        rec_loss=spectral_reconstruction_loss(G_d_x,G_x)
+        rec_loss=spectral_reconstruction_loss(target,G_x)
         loss_g=args.lambda_rec*rec_loss
         train_rec_loss_g+=rec_loss.item()
 
